@@ -28,7 +28,7 @@
       }
 
       .calculator {
-        border-radius: 20px;
+        border-radius: 40px;
         box-shadow: 0 60px 80px rgba(0, 0, 0, 0.6),
           0 45px 26px rgba(0, 0, 0, 0.14);
         border: 3px solid #0077b3;
@@ -45,8 +45,9 @@
         margin: 10px;
         border-radius: 18px;
         box-shadow: 3px 3px teal;
-        font-size: large;
+        font-size:large;
         font-weight: bold;
+        
       }
 
       .calculator form input:hover {
@@ -69,6 +70,8 @@
         width: 150px;
       }
 
+
+
       @media screen and (max-width: 765px) {
         .calculator {
           height: 500px;
@@ -86,6 +89,9 @@
           font-size: large;
           font-weight: bold;
         }
+        form input.equal {
+        width: 150px;
+      }
       }
     </style>
     <link rel="stylesheet" href="style.css" />
@@ -100,7 +106,7 @@
           <div>
             <input
               type="button"
-              class="c"
+              class="restore c"
               value="AC"
               onclick="display.value=''"
             />
@@ -223,9 +229,9 @@
 
     <script>
       document.querySelector(".equal").addEventListener("click", function () {
-        const randColor = Math.floor(Math.random() * 16777215).toString(16);
-        document.querySelector(".container").style.backgroundColor =
-          "#" + randColor;
+        // const randColor = Math.floor(Math.random() * 16777215).toString(16);
+        // document.querySelector(".container").style.backgroundColor =
+        //   "#" + randColor;
 
         const randcolor = Math.floor(Math.random() * 16777215).toString(16);
         document.querySelector(".calculator").style.backgroundColor =
